@@ -46,7 +46,7 @@ Berdasarkan data di atas, terlihat bahwa waktu eksekusi untuk endpoint `/all-stu
 
 4. What are the main challenges you face when conducting performance testing and profiling, and how do you overcome these challenges?
 
-   Tantangan utama bagi saya adalah membaca dan menganalisis hasil tes untuk menentukan langkah optimisasi yang tepat.
+   Tantangan utama bagi saya adalah membaca dan menganalisis hasil tes untuk menentukan langkah optimasi yang tepat. Saya mengatasinya dengan membandingkan hasil tes, memvisualisasikan data, dan menguji perubahan secara bertahap agar optimasi yang dilakukan tepat.
 
 5. What are the main benefits you gain from using IntelliJ Profiler for profiling your application code?
    
