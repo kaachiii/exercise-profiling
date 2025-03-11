@@ -46,6 +46,8 @@ Berdasarkan data di atas, terlihat bahwa waktu eksekusi untuk endpoint `/all-stu
 
 4. What are the main challenges you face when conducting performance testing and profiling, and how do you overcome these challenges?
 
+   Tantangan utama bagi saya adalah membaca dan menganalisis hasil tes untuk menentukan langkah optimisasi yang tepat.
+
 5. What are the main benefits you gain from using IntelliJ Profiler for profiling your application code?
    
    IntelliJ Profiler membantu menemukan bottleneck di level kode, memberikan wawasan tentang penggunaan CPU dan memori, serta memungkinkan optimasi yang lebih tepat pada bagian kode yang bermasalah.
@@ -55,3 +57,5 @@ Berdasarkan data di atas, terlihat bahwa waktu eksekusi untuk endpoint `/all-stu
    Perbedaan hasil dapat terjadi karena JMeter menguji beban aplikasi secara keseluruhan, sedangkan Profiling lebih berfokus pada kode internal. Untuk mengatasinya, saya menganalisis hasil keduanya secara bersamaan dan menyesuaikan dengan konteks pengujian untuk mendapatkan solusi yang tepat.
 
 7. What strategies do you implement in optimizing application code after analyzing results from performance testing and profiling? How do you ensure the changes you make do not affect the application's functionality?
+
+   Setelah menganalisis hasil pengujian performa dan profiling, saya mengoptimalkan kode dengan memperbaiki algoritma, mengurangi pemanggilan fungsi yang tidak perlu, dan meningkatkan efisiensi penggunaan memori. Untuk memastikan perubahan yang saya lakukan tidak memengaruhi fungsionalitas program, saya melakukan pengujian ulang, baik unit test maupun integration test, untuk memeriksa kembali fungsionalitas serta performa program setelah dilakukan perubahan.
