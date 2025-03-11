@@ -7,9 +7,9 @@ import com.advpro.profiling.tutorial.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * @author muhammad.khadafi
@@ -25,16 +25,19 @@ public class StudentService {
 
     public List<StudentCourse> getAllStudentsWithCourses() {
         List<Student> students = studentRepository.findAll();
-        List<StudentCourse> studentCourses = new ArrayList<>();
-        for (Student student : students) {
-            List<StudentCourse> studentCoursesByStudent = studentCourseRepository.findByStudentId(student.getId());
-            for (StudentCourse studentCourseByStudent : studentCoursesByStudent) {
-                StudentCourse studentCourse = new StudentCourse();
-                studentCourse.setStudent(student);
-                studentCourse.setCourse(studentCourseByStudent.getCourse());
-                studentCourses.add(studentCourse);
-            }
+
+        if (students.isEmpty()) {
+            return Collections.emptyList();
         }
+
+        List<Long> studentIds = students.stream().map(Student::getId).collect(Collectors.toList());
+        List<StudentCourse> studentCourses = studentCourseRepository.findByStudentIdIn(studentIds);
+
+        Map<Long, Student> studentMap = students.stream()
+                .collect(Collectors.toMap(Student::getId, Function.identity()));
+
+        studentCourses.forEach(sc -> sc.setStudent(studentMap.get(sc.getStudent().getId())));
+
         return studentCourses;
     }
 
