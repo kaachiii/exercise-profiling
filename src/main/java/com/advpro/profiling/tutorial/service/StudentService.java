@@ -24,21 +24,7 @@ public class StudentService {
     private StudentCourseRepository studentCourseRepository;
 
     public List<StudentCourse> getAllStudentsWithCourses() {
-        List<Student> students = studentRepository.findAll();
-
-        if (students.isEmpty()) {
-            return Collections.emptyList();
-        }
-
-        List<Long> studentIds = students.stream().map(Student::getId).collect(Collectors.toList());
-        List<StudentCourse> studentCourses = studentCourseRepository.findByStudentIdIn(studentIds);
-
-        Map<Long, Student> studentMap = students.stream()
-                .collect(Collectors.toMap(Student::getId, Function.identity()));
-
-        studentCourses.forEach(sc -> sc.setStudent(studentMap.get(sc.getStudent().getId())));
-
-        return studentCourses;
+        return studentCourseRepository.findAll();
     }
 
     public Optional<Student> findStudentWithHighestGpa() {
