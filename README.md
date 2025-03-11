@@ -38,7 +38,7 @@ Berdasarkan data di atas, terlihat bahwa waktu eksekusi untuk endpoint `/all-stu
 
 2. How does the profiling process help you in identifying and understanding the weak points in your application?
    
-   Profiling membantu mengidentifikasi bagian kode yang tidak efisien, seperti metode yang terlalu lambat atau konsumsi sumber daya yang tinggi, sehingga dapat dilakukan optimasi yang lebih spesifik.
+   Profiling membantu mengidentifikasi bagian kode yang tidak efisien, seperti method yang terlalu lambat atau konsumsi sumber daya yang tinggi, sehingga dapat dilakukan optimasi yang lebih spesifik.
 
 3. Do you think IntelliJ Profiler is effective in assisting you to analyze and identify bottlenecks in your application code?
    
