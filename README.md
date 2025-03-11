@@ -21,7 +21,7 @@ Advance Programming - B
    ![cmd-gpa](image/cmd_gpa.png)
    ![res-gpa](image/res-highestgpa.png)
 
-After Refactoring
+### After Refactoring
 1. endpoints `/all-student`
 ![optimized-all-student](image/optimized-all-student.png)
 2. endpoints `/all-student-name`
